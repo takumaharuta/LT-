@@ -11,7 +11,7 @@
     </head>
     <body class="antialiased">
         <h1>Blog Name</h1>
-
+        <a href="/posts/create">create</a></a>
         <div class="posts">
             @foreach($posts as $post)
             <div class="post"> 
