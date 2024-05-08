@@ -7,11 +7,12 @@ use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use App\Models\Category;
 
-class PostController extends Controller
+
+class CategoryController extends Controller
 {
-    public function index(Post $post)//インポートしたPostをインスタンス化して$postとして使用。
-    {
-        return view('posts/index')->with(['posts'=>$post->getPaginateBylimit(5)]);
+    public function index(Category $category)
+    {   
+        return view('categories.index')->with(['posts' => $category->getByCategory()]);
     }
     
     public function show(Post $post)
